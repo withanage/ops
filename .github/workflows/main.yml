@@ -6,8 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        database: ['mysql']
-        #database: ['pgsql','mysql']
+        database: ['pgsql','mysql']
         php-version: [ '8.1' ]
         #application: ['ojs','omp','ops']
 
@@ -15,13 +14,13 @@ jobs:
     steps:
       - uses: xmlFlow/pkp-github-actions@v1
         with:
-          #validate: true
+          validate: true
           test: true
           #application: ${{matrix.application}}
           #repository: 'pkp'
           #branch: 'main'
 
-          #upgrade: true
+          upgrade: true
 
 
 
